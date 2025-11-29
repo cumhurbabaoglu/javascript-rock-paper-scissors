@@ -21,24 +21,38 @@ function playGame() {
   let humanChoiceNormalized = humanChoice.toLowerCase();
   if (humanChoiceNormalized === computerChoice){
     console.log("It's a tie!");
+    console.log(`Your score = ${humanScore}`);
+    console.log(`Computer's score = ${computerScore}`);
   } else if (humanChoiceNormalized === "rock" && computerChoice === "scissors") {
     console.log("You win! Rock beats Scissors!");
-    humanScore += 10;                                                             // another line may be added to print scores to the console
+    humanScore += 10;
+    console.log(`Your score = ${humanScore}`);
+    console.log(`Computer's score = ${computerScore}`);                                                             // another line may be added to print scores to the console
   } else if (humanChoiceNormalized === "scissors" && computerChoice === "rock") {
     console.log("You lose! Rock beats Scissors!");
     computerScore += 10;
+    console.log(`Your score = ${humanScore}`);
+    console.log(`Computer's score = ${computerScore}`);
   } else if (humanChoiceNormalized === "paper" && computerChoice === "rock") {
     console.log("You win! Paper beats Rock!");
     humanScore += 10;
+    console.log(`Your score = ${humanScore}`);
+    console.log(`Computer's score = ${computerScore}`);
   } else if (humanChoiceNormalized === "rock" && computerChoice === "paper") {
     console.log("You lose! Paper beats Rock!");
     computerScore += 10;
+    console.log(`Your score = ${humanScore}`);
+    console.log(`Computer's score = ${computerScore}`);
   } else if (humanChoiceNormalized === "paper" && computerChoice === "scissors") {
     console.log("You lose! Scissors beats Paper!");
     computerScore += 10;
+    console.log(`Your score = ${humanScore}`);
+    console.log(`Computer's score = ${computerScore}`);
   } else if (humanChoiceNormalized === "scissors" && computerChoice === "paper"){
     console.log("You win! Scissors beats Paper");
     humanScore += 10;
+    console.log(`Your score = ${humanScore}`);
+    console.log(`Computer's score = ${computerScore}`);
   }
 }
 
