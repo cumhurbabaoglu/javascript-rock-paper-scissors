@@ -41,10 +41,12 @@ function playGame() {
     humanScore += 10;
   }
 }
-  const humanSelection = getHumanChoice();
-  const computerSelection = getComputerChoice();
 
-  playRound(humanSelection, computerSelection);
+  for (let i = 1; i <= 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+  }
 }
 
 playGame();
