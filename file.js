@@ -14,14 +14,9 @@ function getHumanChoice() {
   return answer;
 }
 
-let humanScore = 0;
-let computerScore = 0;
-
-
-
-
-
 function playGame() {
+  let humanScore = 0;
+  let computerScore = 0;
   function playRound(humanChoice, computerChoice) {
   let humanChoiceNormalized = humanChoice.toLowerCase();
   if (humanChoiceNormalized === computerChoice){
