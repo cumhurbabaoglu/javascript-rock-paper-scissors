@@ -17,7 +17,15 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
+
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
+function playGame() {
+  function playRound(humanChoice, computerChoice) {
   let humanChoiceNormalized = humanChoice.toLowerCase();
   if (humanChoiceNormalized === computerChoice){
     console.log("It's a tie!");
@@ -41,12 +49,4 @@ function playRound(humanChoice, computerChoice) {
     humanScore += 10;
   }
 }
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
-
-function playGame() {
-  
 }
