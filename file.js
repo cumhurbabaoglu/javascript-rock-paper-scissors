@@ -63,6 +63,13 @@ function playGame() {
     playRound(humanSelection, computerSelection);
     if (i === 5) {
       console.log("**** END OF GAME ****");
+      if (humanScore > computerScore) {
+        console.log(`You beat the computer ${humanScore} to ${computerScore}!`);
+      } else if (humanScore < computerScore) {
+        console.log(`You were beaten by the computer ${computerScore} to ${humanScore}!`);
+      } else {
+        console.log("It's a tie. No side beat the other.")
+      }
     } else {
       console.log(`**** END OF ROUND ${i} ****`);
     }
