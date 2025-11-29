@@ -43,6 +43,7 @@ function playGame() {
 }
 
   for (let i = 1; i <= 5; i++) {
+    console.log(`ROUND: ${i}`);
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
