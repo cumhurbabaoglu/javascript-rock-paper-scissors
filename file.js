@@ -10,8 +10,8 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let humanChoice = prompt("Enter your choice:"); // this prompt may be changed later like "Rock, paper or scissors?:"
-  return humanChoice;
+  let answer = prompt("Enter your choice:"); // this prompt may be changed later like "Rock, paper or scissors?:"
+  return answer;
 }
 
 let humanScore = 0;
