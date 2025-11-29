@@ -17,25 +17,6 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
-function getComputerChoice() {
-  let randomValue = Math.ceil(Math.random() * 30);
-  if (randomValue <= 30 && randomValue > 20) {
-    return "rock";
-  } else if (randomValue <= 20 && randomValue > 10) {
-    return "paper";
-  } else {
-    return "scissors";
-  }
-}
-
-function getHumanChoice() {
-  let humanChoice = prompt("Enter your choice:");
-  return humanChoice;
-}
-
-let humanScore = 0;
-let computerScore = 0;
-
 function playRound(humanChoice, computerChoice) {
   let humanChoiceNormalized = humanChoice.toLowerCase();
   if (humanChoiceNormalized === computerChoice){
