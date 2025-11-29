@@ -48,7 +48,7 @@ function playGame() {
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
     if (i === 5) {
-      console.log("END OF GAME");
+      console.log("**** END OF GAME ****");
     } else {
       console.log(`**** END OF ROUND ${i} ****`);
     }
