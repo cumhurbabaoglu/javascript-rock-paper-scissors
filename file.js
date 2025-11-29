@@ -1,5 +1,5 @@
 function getComputerChoice() {
-  let randomValue = Math.ceil(Math.random() * 30);
+  let randomValue = Math.ceil(Math.random() * 30);    // multiply by 30 to provide equal chance for the three options
   if (randomValue <= 30 && randomValue > 20) {
     return "rock";
   } else if (randomValue <= 20 && randomValue > 10) {
@@ -10,7 +10,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let humanChoice = prompt("Enter your choice:");
+  let humanChoice = prompt("Enter your choice:"); // this prompt may be changed later like "Rock, paper or scissors?:"
   return humanChoice;
 }
 
@@ -23,7 +23,7 @@ function playRound(humanChoice, computerChoice) {
     console.log("It's a tie!");
   } else if (humanChoiceNormalized === "rock" && computerChoice === "scissors") {
     console.log("You win! Rock beats Scissors!");
-    humanScore += 10;
+    humanScore += 10;                                                             // another line may be added to print scores to the console
   } else if (humanChoiceNormalized === "scissors" && computerChoice === "rock") {
     console.log("You lose! Rock beats Scissors!");
     computerScore += 10;
