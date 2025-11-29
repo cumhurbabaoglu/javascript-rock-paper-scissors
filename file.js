@@ -19,10 +19,7 @@ let computerScore = 0;
 
 
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
 
 function playGame() {
   function playRound(humanChoice, computerChoice) {
@@ -49,4 +46,8 @@ function playGame() {
     humanScore += 10;
   }
 }
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
+
+  playRound(humanSelection, computerSelection);
 }
