@@ -10,7 +10,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let answer = prompt("Enter your choice:"); // this prompt may be changed later like "Rock, paper or scissors?:"
+  let answer = prompt("Rock, paper or scissors?:"); // this prompt may be changed later like "Rock, paper or scissors?:"
   return answer;
 }
 
