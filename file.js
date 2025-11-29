@@ -27,7 +27,7 @@ function playGame() {
     console.log("You win! Rock beats Scissors!");
     humanScore += 10;
     console.log(`Your score = ${humanScore}`);
-    console.log(`Computer's score = ${computerScore}`);                                                             // another line may be added to print scores to the console
+    console.log(`Computer's score = ${computerScore}`);                                                            
   } else if (humanChoiceNormalized === "scissors" && computerChoice === "rock") {
     console.log("You lose! Rock beats Scissors!");
     computerScore += 10;
