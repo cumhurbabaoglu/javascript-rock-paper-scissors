@@ -12,41 +12,17 @@ function getComputerChoice() {
   let humanScore = 0;
   let computerScore = 0;
   
-  function playRound(humanChoice, computerChoice) {
-  let humanChoiceNormalized = humanChoice.toLowerCase();
-  if (humanChoiceNormalized === computerChoice){
-    console.log("It's a tie!");
-    console.log(`Your score = ${humanScore}`);
-    console.log(`Computer's score = ${computerScore}`);
-  } else if (humanChoiceNormalized === "rock" && computerChoice === "scissors") {
-    console.log("You win! Rock beats Scissors!");
-    humanScore += 10;
-    console.log(`Your score = ${humanScore}`);
-    console.log(`Computer's score = ${computerScore}`);                                                            
-  } else if (humanChoiceNormalized === "scissors" && computerChoice === "rock") {
-    console.log("You lose! Rock beats Scissors!");
-    computerScore += 10;
-    console.log(`Your score = ${humanScore}`);
-    console.log(`Computer's score = ${computerScore}`);
-  } else if (humanChoiceNormalized === "paper" && computerChoice === "rock") {
-    console.log("You win! Paper beats Rock!");
-    humanScore += 10;
-    console.log(`Your score = ${humanScore}`);
-    console.log(`Computer's score = ${computerScore}`);
-  } else if (humanChoiceNormalized === "rock" && computerChoice === "paper") {
-    console.log("You lose! Paper beats Rock!");
-    computerScore += 10;
-    console.log(`Your score = ${humanScore}`);
-    console.log(`Computer's score = ${computerScore}`);
-  } else if (humanChoiceNormalized === "paper" && computerChoice === "scissors") {
-    console.log("You lose! Scissors beats Paper!");
-    computerScore += 10;
-    console.log(`Your score = ${humanScore}`);
-    console.log(`Computer's score = ${computerScore}`);
-  } else if (humanChoiceNormalized === "scissors" && computerChoice === "paper"){
-    console.log("You win! Scissors beats Paper");
-    humanScore += 10;
-    console.log(`Your score = ${humanScore}`);
-    console.log(`Computer's score = ${computerScore}`);
-  }
+  function playRound(humanChoice) {
+    let computerChoice = getComputerChoice();
+    if (humanChoice === computerChoice) {
+        console.log("It's a tie!");
+        console.log(`Your score = ${humanScore}`);
+        console.log(`Computer's score = ${computerScore}`);
+    } else if ((humanChoice === "rock" && computerChoice === "scissors") || (humanChoice === "paper" && computerChoice === "rock") || (humanChoice === "scissors" && computerChoice === "paper")) {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
+        humanScore += 10;
+    } else {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
+        computerScore += 10;
+    }
 }
