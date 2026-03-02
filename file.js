@@ -14,9 +14,9 @@ function getHumanChoice() {
   return answer;
 }
 
-function playGame() {
   let humanScore = 0;
   let computerScore = 0;
+  
   function playRound(humanChoice, computerChoice) {
   let humanChoiceNormalized = humanChoice.toLowerCase();
   if (humanChoiceNormalized === computerChoice){
@@ -55,6 +55,3 @@ function playGame() {
     console.log(`Computer's score = ${computerScore}`);
   }
 }
-}
-
-playGame();
