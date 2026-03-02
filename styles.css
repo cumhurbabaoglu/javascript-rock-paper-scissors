@@ -9,5 +9,11 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    /* background-color: #001d3d; */
+    flex-direction: column;
+    background-color: #001d3d;
+    height: 100vh;
+}
+
+div p {
+    color: white;
 }
