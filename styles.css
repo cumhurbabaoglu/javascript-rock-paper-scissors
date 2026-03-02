@@ -3,3 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    /* background-color: #001d3d; */
+}
