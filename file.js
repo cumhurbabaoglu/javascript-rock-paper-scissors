@@ -26,3 +26,11 @@ function getComputerChoice() {
         computerScore += 10;
     }
 }
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", function(event) {
+    playRound(button.id);
+  })
+})
