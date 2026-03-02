@@ -11,6 +11,11 @@ function getComputerChoice() {
 
   let humanScore = 0;
   let computerScore = 0;
+
+  const buttons = document.querySelectorAll("button");
+  const result = document.querySelector("#result");
+  const displayHumanScore = document.querySelector("#human-score");
+  const displayComputerScore = document.querySelector("#computer-score")
   
   function playRound(humanChoice) {
     let computerChoice = getComputerChoice();
@@ -27,7 +32,6 @@ function getComputerChoice() {
     }
 }
 
-const buttons = document.querySelectorAll("button");
 
 buttons.forEach(button => {
   button.addEventListener("click", function(event) {
