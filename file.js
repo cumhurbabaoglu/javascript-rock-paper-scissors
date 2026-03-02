@@ -20,15 +20,31 @@ function getComputerChoice() {
   function playRound(humanChoice) {
     let computerChoice = getComputerChoice();
     if (humanChoice === computerChoice) {
-        console.log("It's a tie!");
-        console.log(`Your score = ${humanScore}`);
-        console.log(`Computer's score = ${computerScore}`);
+        result.textContent = "It's a tie!";
+        displayHumanScore.textContent = `Your score = ${humanScore}`;
+        displayComputerScore.textContent = `Computer's score = ${computerScore}`;
     } else if ((humanChoice === "rock" && computerChoice === "scissors") || (humanChoice === "paper" && computerChoice === "rock") || (humanChoice === "scissors" && computerChoice === "paper")) {
-        console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
+        result.textContent = `You win! ${humanChoice.toUpperCase()} beats ${computerChoice.toUpperCase()}!`;
         humanScore += 10;
+        displayHumanScore.textContent = `Your Score = ${humanScore}`;
+        displayComputerScore.textContent = `Computer's Score = ${computerScore}`;
     } else {
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
+        result.textContent = `You lose! ${computerChoice.toUpperCase()} beats ${humanChoice.toUpperCase()}!`;
         computerScore += 10;
+        displayHumanScore.textContent = `Your Score = ${humanScore}`;
+        displayComputerScore.textContent = `Computer's Score = ${computerScore}`;
+    }
+
+    if (humanScore === 50) {
+      result.textContent = `Congratulations! You beat the computer by ${humanScore} to ${computerScore}!`;
+      buttons.forEach(button => {
+        button.disabled = true;
+      })
+    } else if (computerScore === 50) {
+      result.textContent = `Better luck next time! You were beaten by the computer by ${computerScore} to ${humanScore}!`;
+      buttons.forEach(button => {
+        button.disabled = true;
+      })
     }
 }
 
