@@ -22,3 +22,11 @@ div p {
     display: flex;
     gap: 20px;
 }
+
+button {
+    padding: 15px;
+    border-radius: 20px;
+    width: 150px;
+    background-color: #00b4d8;
+    color: white;
+}
