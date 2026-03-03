@@ -17,7 +17,11 @@ body {
     font-family: "Cascadia Mono", sans-serif;
 }
 
-div p {
+#game-info {
+    text-align: center;
+}
+
+#game-info p {
     color: white;
 }
 
