@@ -38,9 +38,11 @@ button {
     padding: 15px;
     border-radius: 30px;
     width: 150px;
-    background-color: #00b4d8;
+    background-color: #574db3;
     color: white;
     font-weight: bold;
+    box-shadow: 1px 1px 1px 1px black;
+    transition: all 0.25s ease;
 }
 
 button:hover {
