@@ -45,6 +45,10 @@ button {
     transition: all 0.25s ease;
 }
 
+#reset {
+    border-radius: 50%;
+}
+
 button:hover {
     cursor: pointer;
     background-color: #e0aaff;
