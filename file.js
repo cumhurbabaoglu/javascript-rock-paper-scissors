@@ -18,6 +18,7 @@ function getComputerChoice() {
   const displayComputerScore = document.querySelector("#computer-score")
   const resetButton = document.querySelector(".reset button");
   const allButtons = document.querySelectorAll("button");
+  const roundInfo = document.querySelector("#round-info");
   
   function playRound(humanChoice) {
     let computerChoice = getComputerChoice();
@@ -50,10 +51,14 @@ function getComputerChoice() {
     }
 }
 
+let counter = 0;
+
 
 gameButtons.forEach(button => {
   button.addEventListener("click", function() {
     playRound(button.id);
+    counter++;
+    roundInfo.textContent = `ROUND: ${counter}`;
   })
 })
 
@@ -63,9 +68,11 @@ resetButton.addEventListener("click", function() {
       })
       humanScore = 0;
       computerScore = 0;
+      counter = 0;
       result.textContent = "";
       displayHumanScore.textContent = "";
       displayComputerScore.textContent = "";
+      roundInfo.textContent = "";
 })
 
 
