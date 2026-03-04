@@ -54,3 +54,20 @@ buttons.forEach(button => {
     playRound(button.id);
   })
 })
+
+buttons.forEach(btn => {
+    btn.addEventListener("pointerdown", (e) => {
+        btn.classList.add("pressed");
+    })
+    btn.addEventListener("pointerup", (e) => {
+        setTimeout(() => {
+            btn.classList.remove("pressed")
+        }, 110);
+    })
+    btn.addEventListener("pointerleave", (e) => {
+        setTimeout(() => {
+            btn.classList.remove("pressed")
+        }, 110);
+    })
+})
+
