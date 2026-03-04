@@ -19,6 +19,16 @@ body {
     background-position: bottom;
 }
 
+h1 {
+    margin-bottom: 100px;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 50px;
+    color: white;
+}
+
 #game-info {
     text-align: center;
 }
