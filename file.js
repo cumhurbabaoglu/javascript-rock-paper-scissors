@@ -12,10 +12,12 @@ function getComputerChoice() {
   let humanScore = 0;
   let computerScore = 0;
 
-  const buttons = document.querySelectorAll("button");
+  const gameButtons = document.querySelectorAll(".buttons button");
   const result = document.querySelector("#result");
   const displayHumanScore = document.querySelector("#human-score");
   const displayComputerScore = document.querySelector("#computer-score")
+  const resetButton = document.querySelector(".reset button");
+  const allButtons = document.querySelectorAll("button");
   
   function playRound(humanChoice) {
     let computerChoice = getComputerChoice();
@@ -37,36 +39,48 @@ function getComputerChoice() {
 
     if (humanScore === 50) {
       result.textContent = `Congratulations! You beat the computer by ${humanScore} to ${computerScore}!`;
-      buttons.forEach(button => {
+      gameButtons.forEach(button => {
         button.disabled = true;
       })
     } else if (computerScore === 50) {
       result.textContent = `Better luck next time! You were beaten by the computer by ${computerScore} to ${humanScore}!`;
-      buttons.forEach(button => {
+      gameButtons.forEach(button => {
         button.disabled = true;
       })
     }
 }
 
 
-buttons.forEach(button => {
-  button.addEventListener("click", function(event) {
+gameButtons.forEach(button => {
+  button.addEventListener("click", function() {
     playRound(button.id);
   })
 })
 
-buttons.forEach(btn => {
-    btn.addEventListener("pointerdown", (e) => {
-        btn.classList.add("pressed");
+resetButton.addEventListener("click", function() {
+      gameButtons.forEach(button => {
+        button.disabled = false;
+      })
+      humanScore = 0;
+      computerScore = 0;
+      result.textContent = "";
+      displayHumanScore.textContent = "";
+      displayComputerScore.textContent = "";
+})
+
+
+allButtons.forEach(button => {
+    button.addEventListener("pointerdown", () => {
+        button.classList.add("pressed");
     })
-    btn.addEventListener("pointerup", (e) => {
+    button.addEventListener("pointerup", () => {
         setTimeout(() => {
-            btn.classList.remove("pressed")
+            button.classList.remove("pressed")
         }, 110);
     })
-    btn.addEventListener("pointerleave", (e) => {
+    button.addEventListener("pointerleave", () => {
         setTimeout(() => {
-            btn.classList.remove("pressed")
+            button.classList.remove("pressed")
         }, 110);
     })
 })
