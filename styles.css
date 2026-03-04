@@ -12,9 +12,11 @@ body {
     align-items: center;
     font-size: 24px;
     flex-direction: column;
-    background-color: #001d3d;
     height: 100vh;
     font-family: "Cascadia Mono", sans-serif;
+    background-image: url(pexels-veeterzy-114979.jpg);
+    background-size: cover;
+    background-position: bottom;
 }
 
 #game-info {
